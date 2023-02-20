@@ -1,5 +1,5 @@
 # 抓取PTT電影版的網頁原始碼(HTML)
-import bs4  # 載入解析套件
+
 import urllib.request as req
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -13,13 +13,14 @@ request = req.Request(url, headers={
 with req.urlopen(request) as response:
     data = response.read().decode("utf-8")
 
+
+import bs4  # 載入解析套件
 # 解析原始碼, 取得每篇文章的標題
 root = bs4.BeautifulSoup(data, "html.parser")  # 讓Beautifulsoup協助我們解析HTML格式文件
 
+titles = root.find_all("div", class_="title")
 # find_all():尋找所有符合class="title" 的div標籤
 # 因class為python內建保留字因此在使用find方法時需加入_
-titles = root.find_all("div", class_="title")
-
 
 count = 0
 with open('movie.txt', 'w', encoding=('utf-8')) as file:
