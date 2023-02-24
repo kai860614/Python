@@ -33,7 +33,7 @@ def getData(url):
     return nextLink["href"] #使用return使呼叫函式時能夠回傳上一頁的連結
 
 #主程序：抓取多個頁面的標題    
-pageURL = "https://www.ptt.cc/bbs/Gossiping/index.html" #首頁的網址
+pageURL = "https://www.ptt.cc/bbs/Gossiping/index.html"#首頁的網址
 count=0
 while count < 5: #抓取前五頁的標題
     pageURL="https://www.ptt.cc"+getData(pageURL)
