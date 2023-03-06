@@ -11,8 +11,8 @@ import sys # +as 別名 功能相同 ex:import sys as system
 sys.path.append("modules")
 
 # 建立 geometry模組, 載入使用
-import geometry01
-print(geometry01.distance(1, 1, 5, 5))
-print(geometry01.slope(1,2,5,6))
+import geometry
+print(geometry.distance(1, 1, 5, 5))
+print(geometry.slope(1,2,5,6))
 
 print(sys.path)#印出模組的搜尋路徑列表
