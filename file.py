@@ -1,7 +1,5 @@
 # 儲存檔案
 
-
-import json
 file = open('data.txt', mode='w')  # 開啟
 # 'r':讀取 'w':寫入 'r+':讀寫
 # 如要寫入中文資料, 可在mode後加入, encoding:"utf-8"
@@ -41,6 +39,7 @@ with open("data.txt", mode='r', encoding='utf-8') as file:
 # 使用Json格式讀取 寫入檔案
 # 從檔案中讀取json資料, 放入變數data中
 
+import json
 
 with open("config.json", mode='r') as file:
 
@@ -51,6 +50,7 @@ with open("config.json", mode='r') as file:
 print(data)  # data 是一個字典資料
 print("name:", data["name"])
 print("version:", data["version"])
+
 
 data["name"] = "New name"  # 修改變數中的資料
 # 把最新的資料複寫回檔案中

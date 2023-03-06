@@ -11,13 +11,11 @@ request = req.Request(url, headers={
     "content-type": "application/json",
     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
     },
-    data=json.dumps(requestData).encode("utf-8")) #json.dumps:用json的形式將requestData打平成字串＆用utf-8編碼
-#encode:把字串變成位元組 ex:從網路的回應取得的原始資料就是位元組
-
+    data=json.dumps(requestData).encode("utf-8")) #json.dumps:用json的形式將requestData打平成字串再用encode的方式以utf-8編碼成位元組
 
 #發出請求
 with req.urlopen(request) as response:
-    result = response.read().decode("utf-8") #decode:將取得的資料從位元組轉成字串處理
+    result = response.read().decode("utf-8") #decode:將取得的資料從位元組轉成字串並用utf-8解碼處理
 
 #解析JSON格式的資料,取得每篇文章的標題
 result=json.loads(result) #json.load"s":解析字串load要加s
@@ -27,4 +25,3 @@ result=json.loads(result) #json.load"s":解析字串load要加s
 menus=result["data"]["staffPicksFeed"]["items"] #在進入每一篇文章標題前的路徑
 for menu in menus:
     print(menu["post"]["title"])
-

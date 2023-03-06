@@ -43,12 +43,32 @@ print(sum2)
 # EX 移除列表[1,2,3,4,5]的偶數(using for loop)
 
 """
-data = [1, 2, 3, 4, 5]
-copyData = data.copy()  # 複製一份相同的列表
-x = len(copyData)
-for i in range(x):
-    if copyData[i] % 2 == 0:
-        data.remove(copyData[i])  # 從原本的列表中移除複製列表留下的偶數
-print(data)
+numbers = [1, 2, 3, 4, 5]
+odds = []
+for num in numbers:
+    if num % 2 != 0:
+        odds.append(num)
+print(odds)
 
 """
+
+
+# EX 1+2+4+7+11+16
+
+#印出陣列
+sum=1
+a=[]
+for i in range(6):
+    sum+=i
+    a.append(sum) #將新增的值加進陣列最後
+
+#求陣列總和
+sum2=0
+for j in a:
+    sum2+=j
+print(sum2)
+
+#求陣列中的第n個數的值
+x=int(input("第幾個數："))
+x=1+(((1+(x-1))*(x-1))/2)
+print(x)
