@@ -11,7 +11,7 @@ request = req.Request(url, headers={
 
 
 with req.urlopen(request) as response:
-    data = response.read().decode("utf-8")
+    data = response.read().decode("utf-8")  #decode:將取得的資料從位元組轉成字串並用utf-8解碼處理
 
 
 import bs4  # 載入解析套件
@@ -23,12 +23,11 @@ titles = root.find_all("div", class_="title")
 # 因class為python內建保留字因此在使用find方法時需加入_
 
 count = 0
-with open('movie.txt', 'w', encoding=('utf-8')) as file:
+with open('movie.txt', 'w', encoding=('utf-8')) as file: #為了寫入檔案，需在以encode的方式以utf-8編碼，轉換資料為二進位制儲存
     for title in titles:
         if title.a != None:  # 如果標題包含</a>標籤(沒有被刪除)
             count += 1
             if count != len(titles):
-                # 印出具有</a>標籤的標題(類型:string字串)並寫入movie.txt中
-                file.write(title.a.string+'\n')
+                file.write(title.a.string+'\n')  # 印出具有</a>標籤的標題(類型:string字串)並寫入movie.txt中
             else:
                 file.write(title.a.string)

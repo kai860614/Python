@@ -1,9 +1,7 @@
-# 隨機模組
-import statistics as stat
+# 載入隨機模組
 import random
 
 # 隨機選取
-
 data = random.choice([1, 5, 7, 10, 13])  # choice : 從列表中隨機選取一個數
 print(data)
 
@@ -16,14 +14,13 @@ print(data)
 
 print('-------------------------------')
 
-data = random.random()  # only 0~1之間的隨機亂數
-print(data)
-# same as uniform
-# but uniform可控制區間, ex : (60,100) 即為60到100之間
-data = random.uniform(0, 100)
+data = random.random()  # random.random : 只能隨機選擇0~1之間的隨機亂數
 print(data)
 
-data = random.randint(1, 100)  # 隨機選出1~100之間的整數
+data = random.uniform(1, 100) # random.uniform : 可以控制隨機選擇的區間, ex : (60,100) 即為60到100之間
+print(data)
+
+data = random.randint(1, 100)  # randint : 隨機選出區間內的『整數』
 print(data)
 
 # 取得常態分配亂數
@@ -35,7 +32,7 @@ print('-------------------------------')
 
 # 在1~100中隨機抽取5個數字
 
-"""
+
 result = []
 count = 0
 while count < 5:
@@ -44,16 +41,17 @@ while count < 5:
     count += 1
 print(result)
 
-"""
 
 
-# 統計模組
+# 載入統計模組
+import statistics as stat
 
-data = stat.mean([1, 2, 3, 4, 5])  # mean :取得平均值
+data = stat.mean([1, 2, 3, 4, 5])  # mean:取得平均值
 print(data)
 
-data = stat.median([1, 2, 3, 4, 5])  # median :取得中位數
+data = stat.median([1, 2, 3, 4, 5])  # median:取得中位數
 print(data)
 
-data = stat.stdev([1, 2, 3, 4, 5])  # stdev :取得標準差
+data = stat.stdev([1, 2, 3, 4, 5])  # stdev:取得標準差
 print(data)
+

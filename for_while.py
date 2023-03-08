@@ -15,8 +15,8 @@ print(sum)
 
 # for x in [1,2,3]
 # for x in "Hello"
-# for x in range(5) # 未定義開頭即從0開始. 列出0 1 2 3 4
-# for x in range(5,10) #列出5 6 7 8 9
+# for x in range(5) # 未定義開頭即從0開始. 列出第0 1 2 3 4的值
+# for x in range(5,10) #列出第5 6 7 8 9的值
 
 # EX 1+2+3+4+...+10 (using for loop)
 
@@ -61,6 +61,7 @@ a=[]
 for i in range(6):
     sum+=i
     a.append(sum) #將新增的值加進陣列最後
+print(a)
 
 #求陣列總和
 sum2=0
