@@ -73,3 +73,32 @@ print(sum2)
 x=int(input("第幾個數："))
 x=1+(((1+(x-1))*(x-1))/2)
 print(x)
+
+
+#小明的薪水為 50000，每年增加 4％，計算 10 年後他的薪水是多少？
+
+salary_today=50000
+
+for year in range(1,11):
+    salary_today*=1.04
+    
+salary_today=round(salary_today)
+print(f"十年後的薪水為：{salary_today}")
+
+
+
+
+#小時的薪水為 50000，每年增加 4%，計算多少年後，他的薪水會變 2 倍?
+
+salary_today=50000
+
+salary_future=100000
+
+year=0
+
+while salary_today<salary_future:
+    salary_today*=1.04
+    year+=1
+
+
+print(f"{year}年後，小時的薪水會變為2倍")

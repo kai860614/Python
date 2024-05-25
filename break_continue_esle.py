@@ -1,5 +1,5 @@
 # break 停止
-# EX n從0開始, 當=3時break
+# ex: n從0開始, 當=3時break
 
 n = 0
 while n < 5:

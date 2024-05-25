@@ -2,8 +2,11 @@
 
 grades=[12,13,14,15,16]
 grades[1:4]=[] #連續刪除列表中從編號1到3的資料 
-#grades=grades+[17,18] #在列表最後方直接加入新資料
+grades=grades+[17,18] #在列表最後方直接加入新資料
 print(grades)
+
+for index, num in enumerate(grades):
+	print(index,num)
 
 
 data=[3,4,5],[6,7,8]

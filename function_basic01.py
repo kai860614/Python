@@ -1,14 +1,15 @@
 # 定義函式
 def multiply(a,b):
-    print(a*b)
-    return  # 回傳值 後面沒東西就是回傳None
-    # return (10) #回傳10
-    # return (a*b)  # 回傳a*b
+    return (a*b) 
+    # 回傳值 後面沒東西就是回傳None
+    # return (10) 回傳10
+    # return (a*b) 回傳a*b
 
 
 # 呼叫函式
 value = multiply(6,5)
 print(value)
+
 
 # 函式可用來做程式的包裝 : 同樣的邏輯可以重複利用
 

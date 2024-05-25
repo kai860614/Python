@@ -24,6 +24,21 @@ s = set('Hello')  # set(字串) 將字串文字個別拆解成集合(不重覆, 
 print(s)
 
 
+# 定义一个集合
+my_set = {5, 3, 1, 4, 2}
+
+# 将集合转换为升序排列后的列表
+my_list = sorted(my_set)
+# 将集合转换为降序排列后的列表
+my_list_desc = sorted(my_set, reverse=True)
+
+# 打印结果
+print("集合 (set):", my_set)
+print("升序列表 (sorted list in ascending order):", my_list)
+print("降序列表 (sorted list in descending order):", my_list_desc)
+
+
+
 # 字典的運算 : key-value配對 使用大誇號
 
 dic = {"apple": "蘋果", "bug": "蟲蟲"}  # key : value

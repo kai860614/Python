@@ -38,3 +38,19 @@ def test(**kwargs):
     print(kwargs)
 
 test(a=3, b=4, c=5)
+
+
+
+def switch_case(value):
+	match value:
+            case 1:
+                print("Case 1")
+            case 2:
+                print("Case 2")
+            case _:
+        # 在未匹配到任何 case 時執行的程式碼
+                print("Default Case")
+
+# 測試
+switch_case(2)
+switch_case(4)

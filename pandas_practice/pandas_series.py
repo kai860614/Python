@@ -3,7 +3,7 @@ import pandas as pd
 
 #資料索引
 data=pd.Series([5,4,-2,3,7],index=['a','b','c','d','e']) #index:自訂索引
-#print(data)
+print(data)
 #觀察資料
 print('資料型態:',data.dtype)
 print('資料數量:',data.size)
@@ -31,3 +31,19 @@ print(data2.str.len()) #len:字串長度
 print(data2.str.cat(sep=",")) #sep=""：把字串串起來，可以自訂串接的符號
 print(data2.str.contains("P")) #contains:判斷每個字串是否包含特定的字元
 print(data2.str.replace("您好","Hello")) #replace:取代A值為B值
+
+print('---------------------')
+
+data3=pd.Series([20,10,15])
+
+# 基本Series操作
+# 處理一維資料
+# print(data)
+print("Max:",data.max()) #最大值
+print("Median:",data.median()) #中位數
+
+data3=data3*2 
+print(data3)
+
+data3=data3==40
+print(data3)
