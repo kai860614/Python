@@ -6,6 +6,7 @@
 
 def linear_search(numbers,target):
     # 若找到目標的數值則回傳數值的 index
+    # enumerate:同時獲取元素的索引和值
     for index,num in enumerate(numbers):
         if num==target:
             return index
@@ -22,11 +23,11 @@ print("-----------------------------------")
 #Binary search 二元搜索 (只能對已排序的數列使用)
 
 def binary_search(numbers, target): 
-
+    # left/right/mid 皆為索引值
     left = 0
     right = len(numbers) - 1 
     while left <= right:
-        mid = (left + right) // 2   
+        mid = (left + right) // 2   #使用“//”整數除法確保值為整數
         if numbers[mid] > target:
             # 因為mid的值位於target值的右側且不包含mid,因此更新右邊邊界值為mid的前一個索引
             right = mid - 1

@@ -1,6 +1,8 @@
 #載入pandas模組
 import pandas as pd
 
+# Series 處理一維資料
+
 #資料索引
 data=pd.Series([5,4,-2,3,7],index=['a','b','c','d','e']) #index:自訂索引
 print(data)
@@ -8,13 +10,9 @@ print(data)
 print('資料型態:',data.dtype)
 print('資料數量:',data.size)
 print('資料索引:',data.index)
-
-print('---------------------')
 #取得資料：根據順序、根據索引
 print(data[2])
 print(data["e"])
-
-print('---------------------')
 #數字運算：基本、統計、順序
 print("最大值：",data.max())
 print("總和：",data.sum())
@@ -35,12 +33,6 @@ print(data2.str.replace("您好","Hello")) #replace:取代A值為B值
 print('---------------------')
 
 data3=pd.Series([20,10,15])
-
-# 基本Series操作
-# 處理一維資料
-# print(data)
-print("Max:",data.max()) #最大值
-print("Median:",data.median()) #中位數
 
 data3=data3*2 
 print(data3)

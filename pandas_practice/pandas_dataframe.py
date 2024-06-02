@@ -29,7 +29,7 @@ print(data2)
 
 print('----------------------------------')
 
-#由dict所組的的list建立DataFrame
+#由dict所組成的list建立DataFrame
 data3 = [
         {'a': 1, 'b': 2, 'c': 3}, 
         {'a': 4, 'b': 5, 'c': 6, 'd': 7}
@@ -71,7 +71,8 @@ score_df = pd.DataFrame(
 score_df.to_excel("score_table.xlsx")
 
 #讀取 Excel 的資料，想要根據各分卷的權重來計算每位學生的成績。
-df = pd.read_excel('score_table.xlsx')
+#index_col=0：讓終端不會顯示Unnamed:0的列
+df = pd.read_excel('score_table.xlsx',index_col=0)
 
 # 讀取每一行的 index 和 row 資料
 # 使用iterrows()來遍歷 score_df DataFrame 的每一行
