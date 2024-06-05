@@ -22,7 +22,7 @@ car.get_original_price() # 將會取得 class attribute (price)
 car.get_current_price() # 將會取得 instance attribute (price)
 # 不用生成 object，可直接使用
 Toy.get_original_price() # 因為是class method 所以可直接取得 class attribute (price)
-Toy.get_current_price() # 會噴錯，因為get_current_price是實例方法，必須通過實例來調用，不能直接通過類別來調用。
+#Toy.get_current_price() # 會噴錯，因為get_current_price是實體方法，必須通過實例來調用，不能直接通過類別來調用。
 
 
 # Static method

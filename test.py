@@ -1,21 +1,10 @@
-class Toy:
-    price = 100
 
-    def get_current_price(self):
-        print(f"Current Price: {self.price}")
+# 1,2,3,5,8,13,21,34
 
-    # 建立 class method
-    @classmethod
-    def get_original_price(cls):
-        # 透過 cls 可應用 class attribute
-        print(f"Original Price: {cls.price}")
+numbers = [1, 2]  # 初始化前兩個元素
 
-car = Toy()
-# 修改 instance attribute (price)
-car.price = 80
-car.get_original_price() # 將會取得 instance attribute (price)
-car.get_current_price() # 將會取得 class attribute (price)
+for n in range(6):  # 後續的6個元素
+    next_number = numbers[-1] + numbers[-2]  # 計算下一個費氏數
+    numbers.append(next_number)  # 將下一個數添加到數列中
 
-# 不用生成 object，可直接使用
-Toy.get_original_price() # 同樣可取得 class attribute (price)
-Toy.get_current_price() # 會噴錯，因為不是 instance object
+print(numbers)  # 輸出完整的費氏數列
