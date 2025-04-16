@@ -6,8 +6,8 @@ import pandas as pd
 #由list所組成的dict建立DataFrame
 data=pd.DataFrame({
     "name":["Amy","John","Bob"],
-    "Salary":[30000,40000,50000]
-})
+    "salary":[30000,40000,50000]
+}, index=['a','b','c'])
 
 # 基本DataFrame操作
 print(data)
@@ -15,9 +15,21 @@ print('----------------------------------')
 #取得特定的欄位
 print(data['name'])
 print('----------------------------------')
-#取得特定的列
+#透過順序,取得特定的列
 print(data.iloc[0]) #印出第一列
 print('----------------------------------')
+#透過索引,取得特定的列
+print(data.loc['b']) #印出第二列
+print('----------------------------------')
+#建立新的欄位
+data['revenue']=[500000,400000,300000] #data[新欄位的名稱]=列表
+data['rank']=pd.Series([3,6,1],index=['a','b','c']) #data[新欄位的名稱]=Series的資料
+data['cp']=data['revenue']/data['salary'] #利用欄位運算得到新欄位的值
+print(data)
+print('----------------------------------')
+
+
+
 
 data2=pd.DataFrame({
     #每個 key 的 list 數量必須一致，否則會出現錯誤。 因此若該欄位沒有資料時，需自行補上 nan 的值，可以填入 None 來生成 nan 值。
