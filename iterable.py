@@ -18,7 +18,7 @@ print(result)
 result=max({11,3,7})
 print(result)
 result=max({'a':3,'z':5})
-print(result)
+print(result) #印出key值
 
 # sorted(可疊代資料
 result=sorted([10,2,5])
