@@ -9,6 +9,7 @@ msg['Subject']='測試信件'
 msg.set_content('測試')
 #寄送比較多樣式的內容(html)
 msg.add_alternative('<h3>優惠券</h3>滿五百送一百',subtype='html')
+
 #連線到SMTP server, 驗證寄件人身份並發送郵件
 import smtplib
 #到網路上搜尋gmail smtp server參數
